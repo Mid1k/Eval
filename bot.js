@@ -1,11 +1,4 @@
-const Discord = require('discord.js');
-const bot = new Discord.Client();
-
-bot.on('ready', () => {
-        console.log('Запустился бот ' + bot.user.tag);
-    })
-
-    bot.on("message", async message => {
+ bot.on("message", async message => {
       if (message.content.startsWith("<eval") || message.content.startsWith("<e")) {
           if(!message.member.hasPermission(8)) return
         let args = message.content.split(" ");
@@ -18,5 +11,3 @@ bot.on('ready', () => {
         }
       }
     });
-
-bot.login('token');
